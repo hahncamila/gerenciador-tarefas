@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../img/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+
+#lista-tarefas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #290438;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+#lista-tarefas h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Formulário de nova tarefa */
+
+
+.tarefas-form{
+    display: flex;
+    width: 100%;
+}
+
+.tarefas-form input{
+    border: none;
+    border-radius: 10px;
+    color: #290438;
+    font-size: 16px;
+    width: 100%;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.tarefas-form .form-button{
+    border: none;
+    min-width: 30px;
+    min-height: 30px;
+    background-color: #b383c9;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: scale 0.5s ease;
+
+}
+
+.tarefas-form .form-button:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+
+
+/* Listagem das tarefas existentes, edição e remoção de tarefa */
+
+
+#tarefas{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.tarefa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.tarefa .tarefa-descricao{
+    font-size: 16px;
+    padding: 5px 0px;
+    width: 100%;
+}
+
+.tarefa .tarefa-acao{
+    display: flex;
+    gap: 10px;
+}
+
+.action-button{
+    font-size: 16px;
+    color: aliceblue;
+}
+
+
+@media screen and (max-width: 600px){
+    #to_do{
+        width: 300px;
+    }
+}
